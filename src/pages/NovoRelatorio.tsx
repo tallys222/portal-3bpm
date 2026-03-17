@@ -178,7 +178,7 @@ export function NovoRelatorio({ onSaved, initialData }: Props) {
         </div>
         <div className="fg" style={{ marginTop: 12 }}>
           <label>Supervisor — Nome completo + Posto</label>
-          <input value={supNome} onChange={(e) => setSupNome(e.target.value)} placeholder="Ex.: JOSE DA CRUZ AMORIM - SUB TEN PM" />
+          <input value={supNome} onChange={(e) => setSupNome(e.target.value)} placeholder="Ex.: JOSE DA SILVA - 1º TEN PM" />
         </div>
       </div>
 
@@ -200,13 +200,13 @@ export function NovoRelatorio({ onSaved, initialData }: Props) {
       {error && <p className="err-msg" style={{ marginBottom: 8 }}>⚠ {error}</p>}
 
       <div className="btn-group">
-        <button className="btn primary" onClick={handleSave} disabled={saving}>{saving ? "Salvando…" : "💾 Salvar no Firebase"}</button>
+        <button className="btn primary" onClick={handleSave} disabled={saving}>{saving ? "Salvando…" : "💾 Salvar e Enviar"}</button>
         <button className="btn" onClick={handleSalvarRascunho} style={{ borderColor: "rgba(245,158,11,.4)", color: "#f59e0b" }}>📝 Salvar Rascunho</button>
         <button className="btn" onClick={handleClear}>🗑 Limpar</button>
       </div>
 
       <p style={{ fontSize: 11, color: "var(--muted)", marginTop: 8 }}>
-        💡 O rascunho é salvo <b>neste navegador</b> e persiste entre sessões. "Salvar no Firebase" é permanente e visível ao gestor.
+        💡 O rascunho é salvo <b>neste navegador</b> e persiste entre sessões. "Salvar e Enviar" é permanente e visível ao gestor.
       </p>
     </div>
   );
